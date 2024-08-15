@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق صوت الحق</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- شاشة تسجيل الدخول -->
+    <div id="login-screen" class="screen">
+        <h1>تسجيل الدخول</h1>
+        <form id="login-form">
+            <label for="national-id">الرقم الوطني:</label>
+            <input type="text" id="national-id" name="national-id" required>
+
+            <label for="password">كلمة السر:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="captcha">
+                <label for="captcha">أدخل النص التالي:</label>
+                <input type="text" id="captcha" name="captcha" required>
+                <p id="captcha-text">2024</p>
+            </div>
+
+            <button type="submit">تسجيل الدخول</button>
+            <p><a href="#" id="forgot-password">هل نسيت كلمة السر؟</a></p>
+        </form>
+    </div>
+
+    <!-- القائمة الرئيسية -->
+    <div id="main-screen" class="screen hidden">
+        <header>
+            <h1>صوت الحق</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="vote-tab"><i class="fas fa-vote-yea"></i> التصويت</a></li>
+                    <li><a href="#" id="candidates-tab"><i class="fas fa-users"></i> معلومات المرشحين</a></li>
+                    <li><a href="#" id="rules-tab"><i class="fas fa-gavel"></i> القوانين والتعليمات</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- قسم التصويت -->
+        <section id="vote-section" class="hidden">
+            <h2>التصويت</h2>
+            <form id="vote-form">
+                <label for="governorate">اختر المحافظة:</label>
+                <select id="governorate" name="governorate" required>
+                    <option value="1">محافظة 1</option>
+                    <option value="2">محافظة 2</option>
+                    <option value="3">محافظة 3</option>
+                </select>
+
+                <label for="district">اختر اللواء:</label>
+                <select id="district" name="district" required>
+                    <option value="1">لواء 1</option>
+                    <option value="2">لواء 2</option>
+                    <option value="3">لواء 3</option>
+                </select>
+
+                <label for="candidate">اختر المرشح:</label>
+                <select id="candidate" name="candidate" required>
+                    <option value="1">مرشح 1</option>
+                    <option value="2">مرشح 2</option>
+                    <option value="3">مرشح 3</option>
+                </select>
+
+                <button type="submit">تأكيد التصويت</button>
+            </form>
+            <button id="back-to-main">العودة</button>
+        </section>
+
+        <!-- قسم معلومات المرشحين -->
+        <section id="candidates-section" class="hidden">
+            <h2>معلومات المرشحين</h2>
+            <div id="candidates-list">
+                <div class="candidate">
+                    <h3>مرشح 1</h3>
+                    <p>سيرة ذاتية: [معلومات عن مرشح 1]</p>
+                    <p>الإنجازات: [إنجازات مرشح 1]</p>
+                    <p>الأهداف: [أهداف مرشح 1]</p>
+                </div>
+                <div class="candidate">
+                    <h3>مرشح 2</h3>
+                    <p>سيرة ذاتية: [معلومات عن مرشح 2]</p>
+                    <p>الإنجازات: [إنجازات مرشح 2]</p>
+                    <p>الأهداف: [أهداف مرشح 2]</p>
+                </div>
+                <div class="candidate">
+                    <h3>مرشح 3</h3>
+                    <p>سيرة ذاتية: [معلومات عن مرشح 3]</p>
+                    <p>الإنجازات: [إنجازات مرشح 3]</p>
+                    <p>الأهداف: [أهداف مرشح 3]</p>
+                </div>
+            </div>
+            <button id="back-to-main">العودة</button>
+        </section>
+
+        <!-- قسم القوانين والتعليمات -->
+        <section id="rules-section" class="hidden">
+            <h2>القوانين والتعليمات</h2>
+            <div class="rules-content">
+                <h3>تعليمات</h3>
+                <p>[تعليمات]</p>
+
+                <h3>قوانين</h3>
+                <p>[قوانين]</p>
+
+                <h3>عقوبات</h3>
+                <p>[عقوبات]</p>
+            </div>
+            <button id="back-to-main">العودة</button>
+        </section>
+
+        <!-- قسم الإعدادات والخصوصية -->
+        <div id="settings">
+            <h2>الإعدادات والخصوصية</h2>
+            <p>[إعدادات]</p>
+            <p>[خصوصية]</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
